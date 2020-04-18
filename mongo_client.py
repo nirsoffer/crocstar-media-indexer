@@ -30,7 +30,7 @@ def exif_parse(filename):
     return dict
 
 def md5sum(filename):
-    output=subprocess.check_output(['md5','-q',filename],stderr=subprocess.STDOUT,universal_newlines=True)
+    output=subprocess.check_output(['md5sum','-q',filename],stderr=subprocess.STDOUT,universal_newlines=True)
     return output.rstrip().lstrip()
 
 if __name__ == "__main__":
